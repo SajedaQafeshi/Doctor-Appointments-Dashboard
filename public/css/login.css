@@ -1,0 +1,122 @@
+.login {
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login .logo-side {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login .form-side {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.login .form-side h1 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 28px;
+  letter-spacing: -0.6px;
+  word-spacing: 2.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
+}
+
+.login .form-side form {
+  width: 90%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.login .form-side form div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login .form-side form div .input-field {
+  padding-left: 20px;
+  width: 60%;
+  height: 45px;
+  border: 1px solid #e4e4e4;
+  border-radius: 22px;
+  font-size: 16px;
+}
+
+.login .form-side form div .input-field:focus {
+  -webkit-box-shadow: 0 0 3pt 2pt #89c9c9;
+          box-shadow: 0 0 3pt 2pt #89c9c9;
+  outline: none;
+}
+
+.login .form-side form div .btn {
+  width: 50%;
+  height: 50px;
+  font-size: 28px;
+  background-color: #89c9c9;
+  border: none;
+  border-radius: 25px;
+  color: #fefeff;
+}
+
+.login .form-side form div .btn:focus, .login .form-side form div .btn:active, .login .form-side form div .btn:hover {
+  outline: none;
+  background-color: #5da0a0;
+  font-size: 29px;
+  cursor: pointer;
+}
+/*# sourceMappingURL=login.css.map */
