@@ -1,14 +1,14 @@
-let MongoClient = require('mongodb').MongoClient;
+require('./model/db');
 let express = require('express');
 let path = require('path');
 let app = express();
 let bodyParser = require('body-parser');
-let url = "mongodb://localhost:27017/Doctor-Appointments-Dashboard";
 let exphbs = require('express-handlebars');
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 
-
-app.set('view engine', '.hbs');
+const doctorController = require('./controller/doctorController');
+app.set('views' ,path.join(__dirname,'/views/'));
 app.engine('.hbs' , exphbs({
     extname : '.hbs',
     defaultLayout: 'mainLayout',
@@ -24,13 +24,11 @@ app.listen(5000,  () => {
     console.log("Doctor Appointments Dashboard listening at 5000.");
 });
 
+app.use('/doctor', doctorController)
 //root path 
 
 app.get('/',  (req, res) => {
-    res.render('home.hbs',{
-        titel:"Home",
-        style:'home.css'
-    });
+    res.redirect('/login');
 });
 
 app.get('/login',  (req, res) => {
@@ -48,12 +46,6 @@ app.post('/login',  (req, res) => {
     });
 });
 
-app.get('/Doctor/add',  (req, res) => {
-    res.render('AddDoctor.hbs',{
-        titel:"Add Doctor",
-        style:'AddDoctor.css'
-    });
-});
 
 
 
