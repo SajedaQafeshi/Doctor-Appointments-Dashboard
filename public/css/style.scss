@@ -17,7 +17,32 @@ html , body {
         background-color: #FFFFFF;
         border-radius: 40px;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: space-evenly;
+        
+
+        .nav-bar {
+            height: 80%;
+            width: 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: #F9F9F9;
+            border-radius: 40px;
+            box-shadow: 0 0 3pt 2pt #dee6e6;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 40%;
+            }
+        }
+        .body {
+            width: 80%;
+            height: 100%;
+        }
     }
 }

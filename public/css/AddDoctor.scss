@@ -1,0 +1,98 @@
+.add-doctor {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+    .logo-side {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .btn-back {
+            width: 50%;
+            height: 50px;
+            font-size: 23px;
+            padding: 10px;
+            background-color: #fba079;
+            border: none;
+            border-radius: 25px;
+            color: #fefeff;
+            text-decoration: none;
+        }
+        .btn-back:focus, .btn-back:active, .btn-back:hover {
+            outline: none;
+            background-color: #de834c;
+            font-size: 25px;
+            cursor: pointer;
+        }
+    }
+    .form-add {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h1 {
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            font-size: 28px;
+            letter-spacing: -0.6px;
+            word-spacing: 2.4px;
+            color: #000000;
+            font-weight: 700;
+            text-decoration: none;
+            font-style: italic;
+            font-variant: normal;
+            text-transform: capitalize;
+        }
+        form {
+            width: 90%;
+            height: 70%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            div {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .input-field {
+                    padding-left: 20px;
+                    width: 60%;
+                    height: 45px;
+                    border: 1px solid #e4e4e4;
+                    border-radius: 22px;
+                    font-size: 16px;
+                }
+                .input-field:focus {
+                    box-shadow: 0 0 3pt 2pt #89c9c9;
+                    outline: none;
+                }
+                .btn {
+                    width: 50%;
+                    height: 50px;
+                    font-size: 28px;
+                    background-color: #89c9c9;
+                    border: none;
+                    border-radius: 25px;
+                    color: #fefeff;
+
+                }
+                .btn:focus, .btn:active, .btn:hover {
+                    outline: none;
+                    background-color: #5da0a0;
+                    font-size: 29px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

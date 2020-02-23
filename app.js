@@ -9,7 +9,12 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 app.set('view engine', '.hbs');
-app.engine('.hbs' , exphbs({extname : '.hbs', defaultLayout: 'mainLayout', layoutsDir: __dirname + '/views/layouts/'}));
+app.engine('.hbs' , exphbs({
+    extname : '.hbs',
+    defaultLayout: 'mainLayout',
+    layoutsDir: __dirname + '/views/layouts/',
+    partialsDir: __dirname + '/views/partials/'
+}));
 app.set('view engine','hbs');
 
 app.use(express.static(__dirname + '/public'));
@@ -43,10 +48,10 @@ app.post('/login',  (req, res) => {
     });
 });
 
-app.get('/',  (req, res) => {
-    res.render('home.hbs',{
-        titel:"Home",
-        style:'home.css'
+app.get('/Doctor/add',  (req, res) => {
+    res.render('AddDoctor.hbs',{
+        titel:"Add Doctor",
+        style:'AddDoctor.css'
     });
 });
 
