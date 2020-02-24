@@ -1,36 +1,27 @@
-.nav-bar {
-  display: none !important;
+.home-page {
+  background-color: #f9f9f999;
 }
 
-.login {
-  width: 90%;
+.img-user {
+  background-color: #dadada;
+}
+
+.notification {
+  background-color: #f9f9f999;
+}
+
+.info {
+  width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.login .logo-side {
-  width: 50%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.login .form-side {
+.info .form-update {
   width: 50%;
   height: 100%;
   display: -webkit-box;
@@ -48,7 +39,7 @@
           flex-direction: column;
 }
 
-.login .form-side h1 {
+.info .form-update h1 {
   font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
   font-size: 28px;
   letter-spacing: -0.6px;
@@ -61,7 +52,7 @@
   text-transform: capitalize;
 }
 
-.login .form-side form {
+.info .form-update form {
   width: 90%;
   height: 50%;
   display: -webkit-box;
@@ -79,7 +70,7 @@
           justify-content: space-evenly;
 }
 
-.login .form-side form div {
+.info .form-update form div {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,7 +83,7 @@
           justify-content: center;
 }
 
-.login .form-side form div .input-field {
+.info .form-update form div .input-field {
   padding-left: 20px;
   width: 60%;
   height: 45px;
@@ -101,13 +92,13 @@
   font-size: 16px;
 }
 
-.login .form-side form div .input-field:focus {
+.info .form-update form div .input-field:focus {
   -webkit-box-shadow: 0 0 3pt 2pt #89c9c9;
           box-shadow: 0 0 3pt 2pt #89c9c9;
   outline: none;
 }
 
-.login .form-side form div .btn {
+.info .form-update form div .btn {
   width: 50%;
   height: 50px;
   font-size: 28px;
@@ -117,10 +108,10 @@
   color: #fefeff;
 }
 
-.login .form-side form div .btn:focus, .login .form-side form div .btn:active, .login .form-side form div .btn:hover {
+.info .form-update form div .btn:focus, .info .form-update form div .btn:active, .info .form-update form div .btn:hover {
   outline: none;
   background-color: #5da0a0;
   font-size: 29px;
   cursor: pointer;
 }
-/*# sourceMappingURL=login.css.map */
+/*# sourceMappingURL=info.css.map */

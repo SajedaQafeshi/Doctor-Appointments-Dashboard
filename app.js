@@ -24,11 +24,18 @@ app.listen(5000,  () => {
     console.log("Doctor Appointments Dashboard listening at 5000.");
 });
 
-app.use('/doctor', doctorController)
+app.use('/doctor', doctorController);
 //root path 
 
 app.get('/',  (req, res) => {
     res.redirect('/login');
+});
+
+app.get('/home',  (req, res) => {
+    res.render('home.hbs',{
+        titel:"Home",
+        style:'home.css'
+    });
 });
 
 app.get('/login',  (req, res) => {

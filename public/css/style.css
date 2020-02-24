@@ -24,7 +24,7 @@ html, body {
 html .root, body .root {
   width: 85%;
   height: 90%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -53,10 +53,10 @@ html .root .nav-bar, body .root .nav-bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #F9F9F9;
+  background-color: #f9f9f9;
   border-radius: 40px;
-  -webkit-box-shadow: 0 0 3pt 2pt #dee6e6;
-          box-shadow: 0 0 3pt 2pt #dee6e6;
+  -webkit-box-shadow: 0 0 3pt 1pt #dee6e6;
+          box-shadow: 0 0 3pt 1pt #dee6e6;
 }
 
 html .root .nav-bar div, body .root .nav-bar div {
@@ -73,7 +73,26 @@ html .root .nav-bar div, body .root .nav-bar div {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 40%;
+  width: 62%;
+  height: 7%;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+html .root .nav-bar div a, body .root .nav-bar div a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html .root .nav-bar div:hover, body .root .nav-bar div:hover {
+  background-color: #dadada;
 }
 
 html .root .body, body .root .body {

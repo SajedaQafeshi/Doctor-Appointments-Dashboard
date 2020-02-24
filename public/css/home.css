@@ -1,18 +1,12 @@
-.add-doctor {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.home-page {
+  background-color: #dadada;
 }
 
-.add-doctor .logo-side {
-  width: 50%;
-  height: 100%;
+.img-user {
+  background-color: #f9f9f999;
 }
 
-.add-doctor .form-add {
-  width: 50%;
-  height: 100%;
+.notification {
+  background-color: #f9f9f999;
 }
 /*# sourceMappingURL=home.css.map */
