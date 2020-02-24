@@ -8,6 +8,8 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 const doctorController = require('./controller/doctorController');
+const appointmentController = require('./controller/appointementController');
+
 app.set('views' ,path.join(__dirname,'/views/'));
 app.engine('.hbs' , exphbs({
     extname : '.hbs',
@@ -25,6 +27,7 @@ app.listen(5000,  () => {
 });
 
 app.use('/doctor', doctorController);
+app.use('/appointement', appointmentController);
 //root path 
 
 app.get('/',  (req, res) => {

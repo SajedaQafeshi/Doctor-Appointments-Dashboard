@@ -1,16 +1,15 @@
 const express = require('express');
 let router = express.Router();
-const mongoose = require('mongoose');
 const Doctor = require('../model/doctor.model');
 
 
 router.get('/list', (req, res) => {
-    Doctor.find((err ,docs) => {
+    Doctor.find((err, docs) => {
         if (!err) {
             res.render('doctors.hbs', {
                 titel: "Doctors Page",
                 style: 'doctors.css',
-                doctors : docs
+                doctors: docs
             });
         } else {
             console.log('Error during record insertion : ' + err);
@@ -19,12 +18,13 @@ router.get('/list', (req, res) => {
 });
 
 router.get('/update/:id', (req, res) => {
-    Doctor.findById(req.params.id, (err ,doc) => {
+    Doctor.findById(req.params.id, (err, doc) => {
         if (!err) {
             res.render('addDoctor.hbs', {
                 titel: "Doctors Page",
                 style: 'addDoctor.css',
-                doctor : doc
+                doctorTitle: 'Update',
+                doctor: doc
             });
         } else {
             console.log('Error during record insertion : ' + err);
@@ -34,7 +34,7 @@ router.get('/update/:id', (req, res) => {
 
 
 router.get('/delete/:id', (req, res) => {
-    Doctor.findByIdAndRemove(req.params.id, (err ,doc) => {
+    Doctor.findByIdAndRemove(req.params.id, (err, doc) => {
         if (!err) {
             res.redirect('/doctor/list');
         } else {
@@ -61,7 +61,8 @@ router.get('/info', (req, res) => {
 router.get('/add', (req, res) => {
     res.render('addDoctor.hbs', {
         titel: "Add Doctor",
-        style: 'addDoctor.css'
+        style: 'addDoctor.css',
+        doctorTitle: 'Add New'
     });
 });
 
@@ -90,14 +91,14 @@ function insertDoctor(req, res) {
 }
 
 function updateInfo(req, res) {
-    Doctor.findOneAndUpdate({ _id: req.body._id }, req.body,{new : true}, function (err, doc) {
-        if (!err) { 
+    Doctor.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true }, function (err, doc) {
+        if (!err) {
             res.redirect('/doctor/list');
         }
         else {
             console.log('Error during record insertion : ' + err);
         }
-        
+
     });
 }
 
