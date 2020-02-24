@@ -4,6 +4,46 @@ const mongoose = require('mongoose');
 const Doctor = require('../model/doctor.model');
 
 
+router.get('/list', (req, res) => {
+    Doctor.find((err ,docs) => {
+        if (!err) {
+            res.render('doctors.hbs', {
+                titel: "Doctors Page",
+                style: 'doctors.css',
+                doctors : docs
+            });
+        } else {
+            console.log('Error during record insertion : ' + err);
+        }
+    });
+});
+
+router.get('/update/:id', (req, res) => {
+    Doctor.findById(req.params.id, (err ,doc) => {
+        if (!err) {
+            res.render('addDoctor.hbs', {
+                titel: "Doctors Page",
+                style: 'addDoctor.css',
+                doctor : doc
+            });
+        } else {
+            console.log('Error during record insertion : ' + err);
+        }
+    });
+});
+
+
+router.get('/delete/:id', (req, res) => {
+    Doctor.findByIdAndRemove(req.params.id, (err ,doc) => {
+        if (!err) {
+            res.redirect('/doctor/list');
+        } else {
+            console.log('Error during record insertion : ' + err);
+        }
+    });
+});
+
+
 router.get('/', (req, res) => {
     res.render('home.hbs', {
         titel: "Home",
@@ -19,18 +59,18 @@ router.get('/info', (req, res) => {
 });
 
 router.get('/add', (req, res) => {
-    res.render('AddDoctor.hbs', {
+    res.render('addDoctor.hbs', {
         titel: "Add Doctor",
-        style: 'AddDoctor.css'
+        style: 'addDoctor.css'
     });
 });
 
 router.post('/add', (req, res) => {
-    insertDoctor(req, res);
-});
-
-router.put('/update', (req, res) => {
-    updateInfo(req, res);
+    if (req.body._id == '') {
+        insertDoctor(req, res);
+    } else {
+        updateInfo(req, res);
+    }
 });
 
 function insertDoctor(req, res) {
@@ -50,22 +90,14 @@ function insertDoctor(req, res) {
 }
 
 function updateInfo(req, res) {
-    Doctor.findOne({ 'name.last': 'Ghost' }, 'name occupation', function (err, person) {
-        if (err) return handleError(err);
-        
-    });
-    let doctor = new Doctor();
-    doctor.doctorName = req.body.doctorName;
-    doctor.userName = req.body.userName;
-    doctor.email = req.body.userEmail;
-    doctor.phone = req.body.userPhone;
-    doctor.major = req.body.userMajor;
-    doctor.save((err, doc) => {
-        if (!err) {
-            res.redirect('/doctor/');
-        } else {
+    Doctor.findOneAndUpdate({ _id: req.body._id }, req.body,{new : true}, function (err, doc) {
+        if (!err) { 
+            res.redirect('/doctor/list');
+        }
+        else {
             console.log('Error during record insertion : ' + err);
         }
+        
     });
 }
 

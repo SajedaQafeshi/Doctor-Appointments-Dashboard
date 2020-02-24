@@ -1,0 +1,43 @@
+.doctors {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.doctors .table-content {
+  width: 100%;
+  height: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.doctors .table-content table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  background-color: #e7f2f7;
+}
+
+.doctors .table-content table thead {
+  background-color: #009688;
+  color: #e7f2f7;
+}
+
+.doctors .table-content table td, .doctors .table-content table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 12px;
+}
+/*# sourceMappingURL=doctors.css.map */
