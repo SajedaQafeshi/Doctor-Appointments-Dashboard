@@ -1,3 +1,7 @@
+.root {
+  background-color: #ffffff87 !important;
+}
+
 .nav-bar {
   display: none !important;
 }
@@ -99,6 +103,7 @@
   border: 1px solid #e4e4e4;
   border-radius: 22px;
   font-size: 16px;
+  background-color: #ffffffb3;
 }
 
 .login .form-side form div .input-field:focus {

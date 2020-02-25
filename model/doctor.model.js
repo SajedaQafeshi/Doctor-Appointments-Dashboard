@@ -7,7 +7,7 @@ let doctorSchema = new Schema({
     doctorName: {
         type: String
     },
-    passowrd: {
+    password: {
         type: String
     },
     email: {

@@ -1,3 +1,6 @@
+.root {
+    background-color: #ffffff87 !important;
+}
 .nav-bar {
     display: none !important;
 }
@@ -56,6 +59,8 @@
                     border: 1px solid #e4e4e4;
                     border-radius: 22px;
                     font-size: 16px;
+                    background-color: #ffffffb3;
+
                 }
                 .input-field:focus {
                     box-shadow: 0 0 3pt 2pt #89c9c9;
