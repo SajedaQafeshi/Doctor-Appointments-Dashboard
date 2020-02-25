@@ -38,7 +38,7 @@ html .root, body .root {
 }
 
 html .root .nav-bar, body .root .nav-bar {
-  height: 80%;
+  height: 95%;
   width: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -92,11 +92,25 @@ html .root .nav-bar div a, body .root .nav-bar div a {
 }
 
 html .root .nav-bar div:hover, body .root .nav-bar div:hover {
-  background-color: #dadada;
+  background-color: #f0f0f0;
 }
 
 html .root .body, body .root .body {
-  width: 80%;
+  width: 85%;
   height: 100%;
+}
+
+html .root .body h1, body .root .body h1 {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 28px;
+  letter-spacing: -0.6px;
+  word-spacing: 2.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */

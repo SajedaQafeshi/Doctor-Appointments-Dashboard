@@ -7,6 +7,7 @@ let exphbs = require('express-handlebars');
 let session = require('express-session');
 const doctorController = require('./controller/doctorController');
 const appointmentController = require('./controller/appointementController');
+const adminController = require('./controller/adminController');
 const Doctor = require('./model/doctor.model');
 
 
@@ -16,6 +17,8 @@ app.use(bodyParser.json());
 app.use(session({secret:'ui2hf893hf23ofn3023fp',resave:false,saveUninitialized:true}));
 app.use('/doctor', doctorController);
 app.use('/appointement', appointmentController);
+app.use('/admin', adminController);
+
 
 
 app.set('views' ,path.join(__dirname,'/views/'));
@@ -40,7 +43,7 @@ app.get('/',  (req, res) => {
 
 app.get('/login',  (req, res) => {
     if (req.session.doctor) {
-        res.redirect('/doctor/home');
+        res.redirect('/admin/doctor');
     } else {
         res.render('login.hbs',{
             titel:"Login",
@@ -57,7 +60,7 @@ app.post('/login',  (req, res) => {
                     password :pass}, (err, doctor) => {
         if (!err) {
             req.session.doctor = doctor;
-            res.redirect('/doctor/home');
+            res.redirect('/admin/doctor');
         } else {
             res.redirect('/login');
          }

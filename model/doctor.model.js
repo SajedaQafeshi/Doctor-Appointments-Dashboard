@@ -18,6 +18,9 @@ let doctorSchema = new Schema({
     },
     major: {
         type: String
+    },
+    type :{
+        type:Number
     }
 });
 

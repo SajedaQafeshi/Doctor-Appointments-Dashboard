@@ -2,6 +2,10 @@
   background-color: #ffffff87 !important;
 }
 
+.root .app-title {
+  display: none;
+}
+
 .nav-bar {
   display: none !important;
 }
