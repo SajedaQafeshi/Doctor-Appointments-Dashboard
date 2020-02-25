@@ -1,0 +1,32 @@
+<div class="add-doctor">
+    <div class="form-add">
+        <h1>{{doctorTitle}} Doctor {{doctor.doctorName}}</h1>
+
+        <form action="/doctor/add" method="POST" autocomplete="off">
+            <input type="hidden" name="_id" value="{{doctor._id}}">
+            <div>
+                <input type="text" autocomplete="off" value="{{doctor.userName}}" class="input-field" name="userName"
+                    placeholder="User Name" required>
+            </div>
+            <div>
+                <input type="text" autocomplete="off" value="{{doctor.doctorName}}" class="input-field"
+                    name="doctorName" placeholder="Doctor Name" required>
+            </div>
+            <div>
+                <input type="email" autocomplete="off" value="{{doctor.email}}" class="input-field" name="userEmail"
+                    placeholder="Doctor Email" required>
+            </div>
+            <div>
+                <input type="text" autocomplete="off" value="{{doctor.phone}}" class="input-field" name="userPhone"
+                    placeholder="Doctor Phone" required>
+            </div>
+            <div>
+                <input type="text" autocomplete="off" value="{{doctor.major}}" class="input-field" name="userMajor"
+                    placeholder="Doctor Major" required>
+            </div>
+            <div>
+                <input type="submit" autocomplete="off" value="Add Doctor &#10095;" class="btn">
+            </div>
+        </form>
+    </div>
+</div>

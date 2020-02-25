@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 let Schema = mongoose.Schema;
 let appointementSchema = new Schema({
-    userName: {
+    patientName: {
         type: String
     },
     doctorName: {
         type: String
     },
-    passowrd: {
+    mobile: {
         type: String
     },
     email: {
@@ -16,7 +16,7 @@ let appointementSchema = new Schema({
     phone: {
         type: Number
     },
-    major: {
+    address: {
         type: String
     }
 });

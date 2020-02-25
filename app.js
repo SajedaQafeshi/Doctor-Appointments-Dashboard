@@ -35,9 +35,9 @@ app.get('/',  (req, res) => {
 });
 
 app.get('/home',  (req, res) => {
-    res.render('home.hbs',{
+    res.render('doctor/doctors.hbs',{
         titel:"Home",
-        style:'home.css'
+        style:'doctors.css'
     });
 });
 
