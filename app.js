@@ -59,8 +59,13 @@ app.post('/login',  (req, res) => {
     Doctor.findOne({userName : userName,
                     password :pass}, (err, doctor) => {
         if (!err) {
-            req.session.doctor = doctor;
-            res.redirect('/admin/doctor');
+            if (doctor.userName == "admindoctor") {
+                req.session.doctor = doctor;
+                res.redirect('/admin/doctor');
+            } else {
+                req.session.doctor = doctor;
+                res.redirect('/doctor/home');
+            }
         } else {
             res.redirect('/login');
          }

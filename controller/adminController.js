@@ -22,7 +22,7 @@ router.get('/doctor', (req, res) => {
                 }
             });
         } else {
-            res.redirect('/login');
+            res.redirect('/doctor/home');
         }
     } else {
         res.redirect('/login');
@@ -46,7 +46,7 @@ router.get('/update/:id', (req, res) => {
                 }
             });
         } else {
-            res.redirect('/login');
+            res.redirect('/doctor/home');
         }
     } else {
         res.redirect('/login');
@@ -65,7 +65,7 @@ router.get('/delete/:id', (req, res) => {
                 }
             });
         } else {
-            res.redirect('/login');
+            res.redirect('/doctor/home');
         }
     } else {
         res.redirect('/login');
@@ -81,7 +81,7 @@ router.get('/', (req, res) => {
                 admin: "Admin "
             });
         } else {
-            res.redirect('/login');
+            res.redirect('/doctor/home');
         }
     } else {
         res.redirect('/login');
@@ -98,7 +98,7 @@ router.get('/add', (req, res) => {
                 admin: "Admin "
             });
         } else {
-            res.redirect('/login');
+            res.redirect('/doctor/home');
         }
     } else {
         res.redirect('/login');
@@ -114,7 +114,7 @@ router.post('/add', (req, res) => {
                 updateInfo(req, res);
             }
         } else {
-            res.redirect('/login');
+            res.redirect('/doctor/home');
         }
     } else {
         res.redirect('/login');
