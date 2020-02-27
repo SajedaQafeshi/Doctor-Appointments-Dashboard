@@ -1,17 +1,17 @@
 const express = require('express');
 let router = express.Router();
 const Doctor = require('../model/doctor.model');
-
+const Appointment = require('../model/appointment.model');
 
 router.get('/home', (req, res) => {
     if (req.session.doctor) {
-        Doctor.find((err, docs) => {
+        Appointment.find((err, appointments) => {
             if (!err) {
-                res.render('doctor/doctors.hbs', {
-                    titel: "Doctors Page",
-                    style: 'doctors.css',
-                    doctors: docs,
-                    admin: "Admin "
+                res.render('appointment/appointments.hbs', {
+                    titel: "Doctor Page",
+                    style: 'appointments.css',
+                    doctors: appointments,
+                    admin: "Dr " + req.session.doctor.doctorName
                 });
             } else {
                 console.log('Error during record insertion : ' + err);

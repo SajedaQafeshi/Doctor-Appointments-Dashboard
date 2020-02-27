@@ -28,9 +28,11 @@
 
     .table-content {
         width: 100%;
-        height: 70%;
+        height: 80%;
         display: flex;
-        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
         
         table {
             width: 100%;
@@ -51,6 +53,35 @@
             //tr:nth-child(even) {
                // background-color: #f1f1f2;
            // }
+        }
+
+        .add-doctor {
+            display: flex;
+            align-self: flex-end;
+            justify-self: flex-end;
+
+            .btn {
+                font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+                font-size: 28px;
+                letter-spacing: -0.6px;
+                word-spacing: 2.4px;
+                font-weight: 700;
+                text-decoration: none;
+                font-style: italic;
+                font-variant: normal;
+                text-transform: capitalize;
+                background-color: #009688;
+                border: none;
+                border-radius: 25px;
+                color: #fefeff;
+                padding: 12px;
+            }
+            .btn:focus, .btn:active, .btn:hover {
+                outline: none;
+                background-color: #5da0a0;
+                font-size: 29px;
+                cursor: pointer;
+            }
         }
         
     }

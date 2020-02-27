@@ -2,6 +2,14 @@
   background-color: #dadada;
 }
 
+.doctor-page {
+  display: none !important;
+}
+
+.appointment-page {
+  display: none !important;
+}
+
 .img-user {
   background-color: #f9f9f999;
 }
@@ -52,4 +60,4 @@
   text-align: left;
   padding: 12px;
 }
-/*# sourceMappingURL=doctors.css.map */
+/*# sourceMappingURL=appointments.css.map */

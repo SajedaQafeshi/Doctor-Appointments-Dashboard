@@ -33,13 +33,20 @@
 
 .doctors .table-content {
   width: 100%;
-  height: 70%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .doctors .table-content table {
@@ -58,5 +65,38 @@
   border: 1px solid #dddddd;
   text-align: left;
   padding: 12px;
+}
+
+.doctors .table-content .add-doctor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: flex-end;
+}
+
+.doctors .table-content .add-doctor .btn {
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-size: 28px;
+  letter-spacing: -0.6px;
+  word-spacing: 2.4px;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
+  background-color: #009688;
+  border: none;
+  border-radius: 25px;
+  color: #fefeff;
+  padding: 12px;
+}
+
+.doctors .table-content .add-doctor .btn:focus, .doctors .table-content .add-doctor .btn:active, .doctors .table-content .add-doctor .btn:hover {
+  outline: none;
+  background-color: #5da0a0;
+  font-size: 29px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=adminDashboard.css.map */

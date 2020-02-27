@@ -1,8 +1,6 @@
 <div class="add-doctor">
     <div class="form-add">
-        <h1>{{doctorTitle}} Doctor {{doctor.doctorName}}</h1>
-
-        <form action="/doctor/add" method="POST" autocomplete="off">
+        <form action="/admin/add" method="POST" autocomplete="off">
             <input type="hidden" name="_id" value="{{doctor._id}}">
             <div>
                 <input type="text" autocomplete="off" value="{{doctor.userName}}" class="input-field" name="userName"

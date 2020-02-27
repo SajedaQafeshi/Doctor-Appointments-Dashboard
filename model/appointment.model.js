@@ -18,6 +18,10 @@ let appointementSchema = new Schema({
     },
     address: {
         type: String
+    },
+    doctorId :{
+        type: Schema.ObjectId,
+        ref:'doctor'
     }
 });
 
