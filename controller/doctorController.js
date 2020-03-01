@@ -25,7 +25,7 @@ router.get('/home', (req, res) => {
 router.get('/', (req, res) => {
     if (req.session.doctor) {
         res.render('doctor/home.hbs', {
-            titel: "Home",
+            titel: "Home ",
             style: 'home.css',
             admin: "Admin "
         });

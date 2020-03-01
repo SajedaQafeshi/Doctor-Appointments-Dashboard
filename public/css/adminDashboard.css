@@ -29,6 +29,15 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  letter-spacing: -0.6px;
+  word-spacing: 2.4px;
+  color: #000000;
+  font-weight: 700;
+  text-decoration: none;
+  font-style: italic;
+  font-variant: normal;
+  text-transform: capitalize;
 }
 
 .doctors .table-content {
@@ -53,12 +62,11 @@
   width: 100%;
   text-align: left;
   border-collapse: collapse;
-  background-color: #e7f2f7;
 }
 
 .doctors .table-content table thead {
-  background-color: #009688;
-  color: #e7f2f7;
+  background-color: #fdeee3;
+  color: #000;
 }
 
 .doctors .table-content table td, .doctors .table-content table th {
@@ -86,7 +94,7 @@
   font-style: italic;
   font-variant: normal;
   text-transform: capitalize;
-  background-color: #009688;
+  background-color: #f3bd97;
   border: none;
   border-radius: 25px;
   color: #fefeff;
@@ -95,7 +103,7 @@
 
 .doctors .table-content .add-doctor .btn:focus, .doctors .table-content .add-doctor .btn:active, .doctors .table-content .add-doctor .btn:hover {
   outline: none;
-  background-color: #5da0a0;
+  background-color: #f17923;
   font-size: 29px;
   cursor: pointer;
 }

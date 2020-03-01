@@ -73,5 +73,19 @@ app.post('/login',  (req, res) => {
 });
 
 
+app.get('/logout', (req, res) => {
+    if (req.session.doctor) {
+        req.session.destroy(function(err) {
+            if(err) {
+              console.log(err);
+            } else {
+              return res.redirect('/');
+            }
+          });
+    } else {
+        res.redirect('/login');
+    }
+});
+
 
 

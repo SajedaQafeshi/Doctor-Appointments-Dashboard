@@ -121,6 +121,7 @@ router.post('/add', (req, res) => {
     }
 });
 
+
 function insertDoctor(req, res) {
     let doctor = new Doctor();
     doctor.doctorName = req.body.doctorName;

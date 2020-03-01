@@ -25,6 +25,15 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    letter-spacing: -0.6px;
+    word-spacing: 2.4px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: italic;
+    font-variant: normal;
+    text-transform: capitalize;
 
     .table-content {
         width: 100%;
@@ -38,11 +47,10 @@
             width: 100%;
             text-align: left;
             border-collapse: collapse;
-            background-color: #e7f2f7;
 
             thead {
-                background-color: #009688;
-                color: #e7f2f7;
+                background-color: #fdeee3;
+                color: #000;
             }
             td, th {
                 border: 1px solid #dddddd;
@@ -70,7 +78,7 @@
                 font-style: italic;
                 font-variant: normal;
                 text-transform: capitalize;
-                background-color: #009688;
+                background-color: #f3bd97;
                 border: none;
                 border-radius: 25px;
                 color: #fefeff;
@@ -78,7 +86,7 @@
             }
             .btn:focus, .btn:active, .btn:hover {
                 outline: none;
-                background-color: #5da0a0;
+                background-color: #f17923;
                 font-size: 29px;
                 cursor: pointer;
             }

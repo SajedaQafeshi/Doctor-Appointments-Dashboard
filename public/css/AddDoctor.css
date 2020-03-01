@@ -96,7 +96,7 @@
   width: 50%;
   height: 50px;
   font-size: 28px;
-  background-color: #89c9c9;
+  background-color: #f3bd97;
   border: none;
   border-radius: 25px;
   color: #fefeff;
@@ -104,8 +104,8 @@
 
 .add-doctor .form-add form div .btn:focus, .add-doctor .form-add form div .btn:active, .add-doctor .form-add form div .btn:hover {
   outline: none;
-  background-color: #5da0a0;
+  background-color: #f17923;
   font-size: 29px;
   cursor: pointer;
 }
-/*# sourceMappingURL=addDoctor.css.map */
+/*# sourceMappingURL=AddDoctor.css.map */
